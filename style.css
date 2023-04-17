@@ -187,19 +187,28 @@ Works
   margin-bottom: 480px;
 }
 #works .list li {
+  display: flex;
   margin-bottom: 60px;
   font-size: 1.25rem;
 }
 #works .list li img {
   width: 48%;
 }
+#works .list li img:hover{
+  opacity: 0.7;
+}
+#works p{
+  padding: 30px 30px;
+}
 /* 奇数のliタグは左寄せ */
-#works .list li:nth-child(odd) {
+#works .list li:nth-child(odd){
+  flex-direction: row-reverse;
+}
+#works .list p:nth-child(odd){
   text-align: left;
 }
-/* 偶数のliタグは右寄せ */
-#works .list li:nth-child(even) {
-  text-align: right;
+#works .list p:nth-child(even){
+  text-align: left;
 }
 
 /*-------------------------------------------
@@ -284,12 +293,15 @@ SP
     margin-bottom: 280px;
   }
   #works .list li {
+    display: block;
     margin-bottom: 30px;
   }
   #works .list li img {
     width: 100%;
   }
-
+  #click-text{
+    display: block;
+  }
   /*-------------------------------------------
   Museum
   -------------------------------------------*/
