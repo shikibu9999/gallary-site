@@ -1,0 +1,308 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+body {
+  color: #050507;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+}
+a {
+  color: #000000;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+li {
+  list-style: none;
+}
+
+/* h1タグ用 */
+.site-title {
+  font-size: 6.25rem;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  margin: 100px 0;
+}
+/* h2タグ用 */
+.section-title {
+  border-bottom: solid 1px #000;
+  display: inline-block;
+  font-size: 3.75rem;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  margin-bottom: 45px;
+}
+/* コンテンツ幅 */
+.wrapper {
+  max-width: 800px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+/* MainとFooter */
+.container {
+  background: #FFD700;
+  color: #000000;
+  text-align: center;
+}
+
+/*サイドボタン*/
+#side-btn {
+  border: solid 1px #000000;
+  position: fixed;
+  right: -144px;
+  bottom: 200px;
+  transform: rotate(-90deg) translateY(60px);
+  transition: 0.6s;
+  z-index: 30;
+}
+#side-btn a {
+  width: 165px;
+  font-size: 0.875rem;
+  display: inline-block;
+  letter-spacing: 0.1em;
+  padding: 15px 0;
+  transition: 0.3s;
+}
+#side-btn a:last-of-type {
+  border-left: solid 1px #000000;
+}
+#side-btn a:hover {
+  opacity: 0.7;
+}
+
+/*フェード表示*/
+.fadein {
+  opacity: 0;
+  transform: translate(0, 50%);
+  transition: 2s;
+}
+
+.fadein.show {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+/*ハンバーガ―メニュー*/
+.hamburger {
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 25px;
+  /* 一番上にくるように設定 */
+  z-index: 40;
+  display: none;
+}
+.hamburger span {
+  width: 30px;
+  height: 1px;
+  background-color: #000000;
+  position: absolute;
+  left: 6px;
+  transition: 0.5s ease-in-out;
+}
+.hamburger span:nth-child(1) {
+  top: 11px;
+}
+.hamburger span:nth-child(2) {
+  top: 21px;
+}
+.hamburger span:nth-child(3) {
+  top: 31px;
+}
+.hamburger.active span:nth-child(1) {
+  top: 21px;
+  left: 6px;
+  transform: rotate(-45deg);
+}
+.hamburger.active span:nth-child(2),
+.hamburger.active span:nth-child(3) {
+  top: 21px;
+  transform: rotate(45deg);
+}
+#navi {
+  width: 100%;
+  background-color: #fff;
+  color: #050507;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+  transform: translateY(-100%);
+  transition: 0.6s;
+  z-index: 30;
+}
+#navi ul {
+  width: 100%;
+  background-color: #050507;
+  padding: 80px 0 30px 0;
+}
+#navi ul li {
+  padding: 10px 0;
+}
+#navi ul li a {
+  display: block;
+  color: #fff;
+}
+#navi.active {
+  transform: translateY(0%);
+}
+
+/*-------------------------------------------
+Mainvisual
+-------------------------------------------*/
+#mainvisual {
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+#mainvisual img {
+  width: calc(100%/3);
+  height: 100vh;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+/*-------------------------------------------
+About
+-------------------------------------------*/
+#about {
+  margin-bottom: 140px;
+}
+
+#about  {
+  display: block;
+  font-size: 1.45rem;
+}
+
+/*-------------------------------------------
+Works
+-------------------------------------------*/
+#works {
+  margin-bottom: 480px;
+}
+#works .list li {
+  margin-bottom: 60px;
+  font-size: 1.25rem;
+}
+#works .list li img {
+  width: 48%;
+}
+/* 奇数のliタグは左寄せ */
+#works .list li:nth-child(odd) {
+  text-align: left;
+}
+/* 偶数のliタグは右寄せ */
+#works .list li:nth-child(even) {
+  text-align: right;
+}
+
+/*-------------------------------------------
+Museum
+-------------------------------------------*/
+#museum {
+  margin-bottom: 480px;
+  position: relative;
+  z-index: 20;
+}
+#museum .museum-site {
+  position: relative;
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+#museum .museum-site:hover{
+  opacity: 0.7;
+}
+#museum .about-museum {
+  margin-bottom: 20px;
+  font-size: 1.75rem;
+}
+#museum .contact {
+  margin-bottom: 30px;
+}
+#museum .btn {
+  border: solid 1px #000000;
+  color: #000000;
+  display: inline-block;
+  padding: 15px 82px;
+  transition: 0.3s;
+}
+#museum .btn:hover{
+  background-color: #000000;
+  border: #fff;
+  color: #fff;
+}
+
+/*-------------------------------------------
+Footer
+-------------------------------------------*/
+#footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-top: solid 1px #fff;
+  font-size: 1.0rem;
+  padding: 80px 30px;
+  text-align: left;
+}
+#footer p {
+  line-height: 1.6;
+}
+#footer .copyrights{
+  font-weight: 600;
+}
+
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media screen and (max-width: 900px) {
+  .site-title {
+    font-size: 3rem;
+    margin: 50px 0;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+
+  /*-------------------------------------------
+  About
+  -------------------------------------------*/
+  #About {
+    margin-bottom: 80px;
+  }
+
+  /*-------------------------------------------
+  Works
+  -------------------------------------------*/
+  #works {
+    margin-bottom: 280px;
+  }
+  #works .list li {
+    margin-bottom: 30px;
+  }
+  #works .list li img {
+    width: 100%;
+  }
+
+  /*-------------------------------------------
+  Museum
+  -------------------------------------------*/
+  #museum {
+    margin-bottom: 280px;
+  }
+
+  /*-------------------------------------------
+  Footer
+  -------------------------------------------*/
+  #footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 60px 30px;
+  }
+}
